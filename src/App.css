@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+  background-image: url(./assets/nice-beach-suning-weather-hd-wallapaper.jpg);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.search {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 1rem 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.searchInput {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid whitesmoke;
+  background: rgba(255, 255, 255, 0.1);
+  color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.searchButton {
+  margin-left: 15px;
+  padding: 0.5rem 1.3rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 1px solid whitesmoke;
+  background: rgba(255, 255, 255, 0.1);
+  color: whitesmoke;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+}
+
+.weatherName {
+  color: whitesmoke;
+  font-size: 50px;
+  font-weight: 100;
+  margin-bottom: 0;
+  margin-top: 10rem;
+}
+
+.weatherTemp {
+  margin-top: 0;
+  font-weight: 300;
+  color: whitesmoke;
+  font-size: 120px;
+}
+
+.weatherDesc {
+  transform: rotate(270deg);
+  font-size: 30px;
+  color: whitesmoke;
+  font-weight: 200;
+  position: relative;
+  right: -40vw;
+  top: -45vh;
+}
+
+.bottomInfo {
+  display: flex;
+  color: whitesmoke;
+  background-color: rgba(155, 155, 155, 0.322);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 90%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.bottomData {
+  margin-bottom: 5px;
+}
+
+.bottomTitle {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .search {
+    position: absolute;
+    top: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+  .weatherName {
+    margin-left: 3rem;
+  }
+  .weatherTemp {
+    margin-left: 3rem;
+  }
+  .weatherDesc {
+    right: -20vw;
+    top: -50vh;
+  }
+  .bottomInfo {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 150%;
+    transform: translateX(2rem);
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: -3rem;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .search {
+    margin-left: 0rem;
+  }
+  .weatherName {
+    margin-left: 2rem;
+  }
+  .weatherTemp {
+    margin-left: 2rem;
+  }
+  .weatherDesc {
+    top: -33vh;
+    right: -15vw;
+  }
+  .bottomInfo {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 150%;
+    transform: translateX(2rem);
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: 6rem;
   }
 }
